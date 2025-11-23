@@ -176,6 +176,6 @@ You can extend the system with additional features such as:
 - API documentation or analytics  
 
 If you need help with installation or configuration, you can contact support directly via WhatsApp:  
-[+254 791 446968](https://wa.me/254791446968)
+[![WhatsApp](https://img.icons8.com/color/48/000000/whatsapp--v1.png) +254 791 446968](https://wa.me/254791446968)
 
 The project is now fully functional and ready for development, testing, or production rollout.
