@@ -91,9 +91,8 @@ After cloning the repository and running the initial setup commands, complete th
 ### 1. Configure the .env File
 
 Open the `.env` file and fill in the required values.
-
-#### WhatsApp Cloud API
 ```env
+#### WhatsApp Cloud API
 WHATSAPP_TOKEN=
 WHATSAPP_PHONE_NUMBER_ID=
 WHATSAPP_VERIFY_TOKEN=
