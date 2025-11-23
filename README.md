@@ -1,8 +1,8 @@
 # AI WhatsApp Agent (Laravel + WhatsApp Cloud API + OpenAI)
 
 <p align="center">
-  <a href="https://laravel.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="350" alt="Laravel Logo">
+  <a href="https://pos.jminnovatechsolution.co.ke" target="_blank">
+    <img src="https://www.jminnovatechsolution.co.ke/assets/img/iconbg-512.png" width="280" alt="JM Innovatech Logo">
   </a>
 </p>
 
