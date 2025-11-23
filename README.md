@@ -93,6 +93,7 @@ After cloning the repository and running the initial setup commands, complete th
 Open the `.env` file and fill in the required values.
 
 #### WhatsApp Cloud API
+```env
 WHATSAPP_TOKEN=
 WHATSAPP_PHONE_NUMBER_ID=
 WHATSAPP_VERIFY_TOKEN=
@@ -135,6 +136,7 @@ Verify Token: (same value used in .env)
 
 Or if using Ngrok:
 https://YOUR-NGROK-URL.ngrok-free.app/api/webhook/whatsapp
+```
 
 Subscribe to:
 - messages
