@@ -105,22 +105,26 @@ OPENAI_ASSISTANT_ID=
 
 #### Webhook URL
 WHATSAPP_WEBHOOK_URL=https://yourdomain.com/api/webhook/whatsapp
-
+```
 ---
 
 ### 2. Start the Laravel Server
+```bash
 php artisan serve
+```
 
 The application will run on:
+```bash
 http://127.0.0.1:8000
-
+```
 ---
 
 ### 3. Optional: Expose Local Server Using Ngrok
 
 If you are testing locally:
+```bash
 ngrok http 8000
-
+```
 Copy the HTTPS forwarding URL provided by Ngrok.
 
 ---
@@ -131,10 +135,13 @@ In Meta Developer Console, go to:
 WhatsApp > Configuration
 
 Set the following:
+```env
 Callback URL: https://yourdomain.com/api/webhook/whatsapp
 Verify Token: (same value used in .env)
+```
 
 Or if using Ngrok:
+```env
 https://YOUR-NGROK-URL.ngrok-free.app/api/webhook/whatsapp
 ```
 
