@@ -1,66 +1,189 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# AI WhatsApp Agent (Laravel + WhatsApp Cloud API + OpenAI)
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="https://pos.jminnovatechsolution.co.ke" target="_blank">
+    <img src="https://www.jminnovatechsolution.co.ke/assets/img/iconbg-512.png" width="280" alt="JM Innovatech Logo">
+  </a>
 </p>
 
-## About Laravel
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-Framework-red" alt="Laravel">
+  <img src="https://img.shields.io/badge/WhatsApp-Cloud%20API-green" alt="WhatsApp Cloud API">
+  <img src="https://img.shields.io/badge/OpenAI-Assistant-blue" alt="OpenAI">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Status">
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## About This Project
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This repository contains a Laravel-powered AI WhatsApp Agent that integrates:
 
-## Learning Laravel
+* Meta WhatsApp Cloud API
+* OpenAI GPT (Assistants API)
+* Dynamic website data extraction
+* Conversation session tracking
+* Webhook-based message handling
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The agent responds like a human assistant and is designed for JM Innovatech Solutions to automate customer support and provide accurate information on WhatsApp.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Features
 
-## Laravel Sponsors
+* WhatsApp Cloud API integration
+* OpenAI GPT responses (context-aware)
+* Tracks individual chat sessions
+* Scrapes and uses your website content
+* Intro message: "This is JM Innovatech AI Agent Response:" only on the first message of the day
+* Webhook handling
+* Modular Laravel service structure
+* Easy to deploy or extend
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## Tech Stack
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+| Component  | Technology              |
+| ---------- | ----------------------- |
+| Backend    | Laravel 10+             |
+| AI Engine  | OpenAI Assistants API   |
+| Messaging  | WhatsApp Cloud API      |
+| Database   | MySQL          |
+| Deployment | cPanel / VPS    |
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## How to Clone This Repository
 
-## Code of Conduct
+Clone the project and install all required dependencies:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+# Clone the repository
+git clone https://github.com/YOUR-USERNAME/AI-WhatsApp-Agent.git
 
-## Security Vulnerabilities
+# Enter the project directory
+cd AI-WhatsApp-Agent
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Install backend and frontend dependencies
+composer install
+npm install && npm run build
 
-## License
+# Create environment file
+cp .env.example .env
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Generate application key
+php artisan key:generate
+
+# Set necessary permissions (Linux only)
+sudo chmod -R 775 storage bootstrap/cache
+
+# Run database migrations
+php artisan migrate
+```
+
+## Next Steps After Installation
+
+After cloning the repository and running the initial setup commands, complete the following steps to fully configure and run the AI WhatsApp Agent.
+
+---
+
+### 1. Configure the .env File
+
+Open the `.env` file and fill in the required values.
+```env
+#### WhatsApp Cloud API
+WHATSAPP_TOKEN=
+WHATSAPP_PHONE_NUMBER_ID=
+WHATSAPP_VERIFY_TOKEN=
+WHATSAPP_API_URL=https://graph.facebook.com/v20.0
+
+#### OpenAI
+OPENAI_API_KEY=
+OPENAI_ASSISTANT_ID=
+
+#### Webhook URL
+WHATSAPP_WEBHOOK_URL=https://yourdomain.com/api/webhook/whatsapp
+```
+---
+
+### 2. Start the Laravel Server
+```bash
+php artisan serve
+```
+
+The application will run on:
+```bash
+http://127.0.0.1:8000
+```
+---
+
+### 3. Optional: Expose Local Server Using Ngrok
+
+If you are testing locally:
+```bash
+ngrok http 8000
+```
+Copy the HTTPS forwarding URL provided by Ngrok.
+
+---
+
+### 4. Configure WhatsApp Webhook in Meta Developer Console
+
+In Meta Developer Console, go to:
+WhatsApp > Configuration
+
+Set the following:
+```env
+Callback URL: https://yourdomain.com/api/webhook/whatsapp
+Verify Token: (same value used in .env)
+```
+
+Or if using Ngrok:
+```env
+https://YOUR-NGROK-URL.ngrok-free.app/api/webhook/whatsapp
+```
+
+Subscribe to:
+- messages
+- message_deliveries
+- message_reads
+- message_template_status
+
+---
+
+### 5. Test the Webhook
+
+Send a message to your WhatsApp Business number.
+
+Laravel should log the incoming webhook request in the terminal.
+
+---
+
+### 6. Deploy to Production (Optional)
+
+You may deploy to any of the following:
+- cPanel
+- VPS
+- Laravel Forge
+- Docker
+- Cloud hosting
+
+Production deployment steps can be added if needed.
+
+## Conclusion
+
+The AI WhatsApp Agent is now fully installed, configured, and ready for use.  
+You can extend the system with additional features such as:
+
+- Custom message templates  
+- Admin dashboard for message logs  
+- Multiple AI personalities  
+- Rich website data extraction  
+- Automatic customer onboarding messages  
+- API documentation or analytics  
+
+If you need help with installation or configuration, you can contact support directly via WhatsApp:  
+[![WhatsApp](https://img.icons8.com/color/48/000000/whatsapp--v1.png)](https://wa.me/254791446968)
+
+The project is now fully functional and ready for development, testing, or production rollout.
