@@ -19,7 +19,9 @@ class IngestWebsite extends Command
             env('WEBSITE_HOME_URL'),
             env('WEBSITE_ABOUT_URL'),
             env('WEBSITE_SERVICES_URL'),
-            env('WEBSITE_CONTACT_URL')
+            env('WEBSITE_CONTACT_URL'),
+            env('WEBSITE_PORTFOLIO_URL'),
+            env('WEBSITE_BLOG_URL'),
         ];
 
         $scraper = new WebsiteScraper();
